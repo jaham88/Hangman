@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HangmanCodeReview
+namespace HangmanCodeReview.Interfaces
 {
     internal class WordGenerator
     {
         public string[] WordCollection { get; set; }
         public Random random { get; set; }
+        public string wordFromArray { get; set; }
 
         public WordGenerator()
         {
-            this.WordCollection = new string[] 
+            WordCollection = new string[]
             {
                 "programmering",
                 "utveckling",
@@ -29,14 +30,16 @@ namespace HangmanCodeReview
                 "moderkort",
             };
 
-            this.random = new Random();
+            random = new Random();
         }
 
         public string GetWord()
         {
-            int index = random.Next(this.WordCollection.Length);
+            int index = random.Next(WordCollection.Length);
             return WordCollection[index];
         }
+
+        
 
 
     }

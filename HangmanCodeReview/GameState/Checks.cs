@@ -18,7 +18,7 @@ namespace HangmanCodeReview.GameState
             }
         }
 
-        public int CheckSetLives()
+        public int SetLives()
         {
             return 6;
         }

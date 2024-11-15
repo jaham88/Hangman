@@ -1,5 +1,6 @@
 ﻿using HangmanCodeReview.Display;
 using HangmanCodeReview.GameState;
+using HangmanCodeReview.Interfaces;
 
 namespace HangmanCodeReview
 {
@@ -18,7 +19,7 @@ namespace HangmanCodeReview
             string wordToGuess = wordGen.GetWord();
             char[] guessedWord = new string('_', wordToGuess.Length).ToCharArray();
 
-            lives = check.CheckSetLives();
+            lives = check.SetLives();
             List<char> guessedLetters = new List<char>();
 
             
@@ -66,6 +67,7 @@ namespace HangmanCodeReview
                     lives--;
                     Console.WriteLine("Fel gissat! Du förlorade ett liv.");
                 }
+
                 counter++;
                 
 
