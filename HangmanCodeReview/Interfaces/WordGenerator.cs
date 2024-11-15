@@ -22,12 +22,6 @@ namespace HangmanCodeReview.Interfaces
                 "teknik",
                 "dator",
                 "bajskorv",
-                "fortnite",
-                "warcraft",
-                "grafikkort",
-                "processor",
-                "ramminne",
-                "moderkort",
             };
 
             random = new Random();
